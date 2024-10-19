@@ -13,6 +13,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
+app.get('/check',(req,res)=>{
+  res.send({message:"okay okay"});
+})
+
 // fetch all the event
 app.get("/getevents/:userId", (req, res) => {
   const userId = req.params.userId;
